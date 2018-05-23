@@ -1,3 +1,14 @@
-<p>
-  search works!
-</p>
+<div class="row">
+  <div class="col-md-3">
+    Search Artists:
+    <input type="text" placeholder="Search Artists..." class="form-control" [(ngModel)]="search" (keyup)="buscarArtista()">
+  </div>
+  <div class="col-md-9" *ngIf="search.length > 0">
+    <h1 class="text-capitalize">{{ search }}</h1>
+    <hr>
+    <ul>
+      <li *ngFor="let artista of artistas">{{ artista.name }}</li>
+    </ul>
+  </div>
+
+</div>
