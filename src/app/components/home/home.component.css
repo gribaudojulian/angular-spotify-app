@@ -1,6 +1,6 @@
-.row {
-  padding-top: 30px;
+.card-columns{
+  color: black;
 }
-hr {
-  border-top: 1px solid white;
+.card{
+  cursor: pointer;
 }

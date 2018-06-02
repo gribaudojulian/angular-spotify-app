@@ -1,14 +1,23 @@
 <div class="row">
-  <div class="col-md-3">
+  <div class="col">
     Search Artists:
     <input type="text" placeholder="Search Artists..." class="form-control" [(ngModel)]="search" (keyup)="buscarArtista()">
   </div>
-  <div class="col-md-9" *ngIf="search.length > 0">
+  <!-- <div class="col" *ngIf="search.length > 0">
     <h1 class="text-capitalize">{{ search }}</h1>
     <hr>
     <ul>
       <li *ngFor="let artista of artistas">{{ artista.name }}</li>
     </ul>
-  </div>
+  </div> -->
 
+</div>
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+<div class="card-columns m-5" *ngIf="!loading">
+  <div class="card" *ngFor="let artist of artistas" (click)="verArtista(artist)">
+    <img class="card-img-top" [src]="artist.images | noimage" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ artist.name }}</h5>
+    </div>
+  </div>
 </div>

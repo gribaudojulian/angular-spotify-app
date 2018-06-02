@@ -14,6 +14,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ArtistComponent } from './components/artist/artist.component';
+
+//Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { LoadingComponent } from './components/loading/loading.component';
 
 
 @NgModule({
@@ -21,7 +26,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppComponent,
     HomeComponent,
     SearchComponent,
-    NavbarComponent
+    NavbarComponent,
+    ArtistComponent,
+    NoimagePipe,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,6 @@
-hr {
-  border-top: 1px solid white;
+.card-columns {
+  color:black;
+}
+.card{
+  cursor:pointer;
 }
